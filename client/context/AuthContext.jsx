@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import {io} from "socket.io-client"
 
 
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
+const backendUrl = import.meta.env.VITE_BACKEND_URL_PATH;
 axios.defaults.baseURL = backendUrl;
 
 
