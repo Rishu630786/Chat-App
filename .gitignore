@@ -8,7 +8,7 @@ client/.env
 server/.env
 
 # Build folders
-dist/
+
 build/
 
 # Logs
