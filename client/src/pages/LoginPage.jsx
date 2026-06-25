@@ -57,7 +57,10 @@ const LoginPage = () => {
         <>
         <input onChange={handleChange} type="email" name="email" value={formData.email} placeholder='Email Address' required className='p-2 border border-gray-500 rounded-md focus:outline-none  focus:ring-2 focus:ring-indigo-500' />
 
-        <input onChange={handleChange} type="password" name="password" value={formData.password} placeholder='Password' required className='p-2 border border-gray-500 rounded-md focus:outline-none  focus:ring-2 focus:ring-indigo-500' />
+        <input onChange={handleChange} type="password" name="password" value={formData.password} placeholder='Password' required className='p-2 border border-gray-500 rounded-md focus:outline-none  focus:ring-2 focus:ring-indigo-500' 
+        img src={assets.eye_icon} alt="" className='w-5 absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer'
+        
+        />
         </>
     )}
 

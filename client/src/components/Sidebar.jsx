@@ -13,6 +13,7 @@ const Sidebar = () => {
          const [input,setInput] = useState(false)
 
     const navigate = useNavigate();
+    const [isOn, setIsOn] = useState(false);
 
     const filteredUsers = input ? users.filter((user)=>user.fullName.toLowerCase().includes(input.toLowerCase())):users;
 
@@ -28,12 +29,13 @@ const Sidebar = () => {
             <img src={assets.logo} alt="logo" className='max-w-40 ' />
             <div className='relative flex items-center py-2 group'>
                 <img onClick={()=>navigate("/profile")} src={authUser.profilePic || null} alt="" className='w-[35px] ring-2 ring-green-500 aspect-1/1 rounded-full cursor-pointer mr-[15px] ' />
-                <img src={assets.menu_icon} alt="Menu" className='max-h-5 cursor-pointer' />
-                <div className='absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border border-gray-600 text-gray-100 hidden group-hover:block'>
+                <img onClick={()=>setIsOn(!isOn)}  src={assets.menu_icon} alt="Menu" className='max-h-5 cursor-pointer' />
+              { isOn && (
+                <div className='absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border border-gray-600 text-gray-100 group-hover:block'>
                     <p onClick={()=>navigate('/profile')} className='cursor-pointer text-sm'>Edit Profile</p>
                     <hr className='my-2 border-t border-gray-500' />
                     <p onClick={()=>logout()} className='cursor-pointer text-sm'>Logout</p>
-                </div>
+                </div>)}
             </div>
           </div>
 
