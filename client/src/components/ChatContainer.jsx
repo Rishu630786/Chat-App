@@ -5,13 +5,13 @@ import { ChatContext } from '../../context/ChatContext'
 import { AuthContext } from '../../context/AuthContext'
 import toast from 'react-hot-toast'
 import PopUp from './PopUp.jsx'
-import VideoCall from './VideoCall.jsx'
-import { VideoCallContext } from '../../context/VideoCallContext.jsx'
+// import VideoCall from './VideoCall.jsx'
+// import { VideoCallContext } from '../../context/VideoCallContext.jsx'
 const ChatContainer = () => {
 
 const {messages , selectedUser, setSelectedUser, sendMessage, getMessages , setAlert} = useContext(ChatContext)
 const {authUser, onlineUsers} = useContext(AuthContext)
-const {callUser} = useContext(VideoCallContext)
+// const {callUser} = useContext(VideoCallContext)
 
   const scrollEnd = useRef()
 
@@ -65,7 +65,7 @@ const {callUser} = useContext(VideoCallContext)
     
     <div className='h-full overflow-scroll relative backdrop-blur-lg'>
 
-<VideoCall/>
+{/* <VideoCall/> */}
 
 <PopUp/>
 
@@ -78,7 +78,7 @@ const {callUser} = useContext(VideoCallContext)
         </p>
         
        
-          <img onClick={()=>callUser()} src={assets.video_call} alt="" className='max-w-7  hover:scale-110 transition-transform duration-300' />
+          {/* <img onClick={()=>callUser()} src={assets.video_call} alt="" className='max-w-7  hover:scale-110 transition-transform duration-300' /> */}
         <img onClick={()=>setAlert(true)} src={assets.delete_icon} alt="" className='max-w-7   hover:scale-110 transition-transform duration-300' />
         <img onClick={()=>setSelectedUser(null)} src={assets.arrow_icon} alt="" className='md:hidden max-w-7'/>
        
