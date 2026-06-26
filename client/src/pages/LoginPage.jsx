@@ -15,6 +15,13 @@ const LoginPage = () => {
         re_password:"",
         bio:""
     })
+
+    const strongPassword =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&^#()_+\-=\[\]{};':"\\|,.<>\/~`])[A-Za-z\d@$!%*?&^#()_+\-=\[\]{};':"\\|,.<>\/~`]{8,}$/; 
+
+const isStrongPassword = strongPassword.test(formData.password);
+
+
     const isPasswordMatch =
   formData.password &&
   formData.password === formData.re_password;
@@ -96,6 +103,15 @@ const LoginPage = () => {
       </p>
     )}
 
+
+
+{/* password validation */}
+ { currState === "Sign up" && formData.password && !isStrongPassword && (
+  <p className="text-red-500 text-sm mt-1">
+    Password must contain at least 8 characters,<br/> one uppercase letter,
+    one lowercase letter,<br/> one number, and one special character.
+  </p>
+)}
 
     {/* submit button */}
 
