@@ -1,4 +1,6 @@
 import avatar_icon from './avatar_icon.png'
+import eye_open from './eye_open.svg'
+import eye_off from './eye-off.svg'
 import gallery_icon from './gallery_icon.svg'
 import help_icon from './help_icon.png'
 import logo_icon from './logo_icon.svg'
@@ -34,6 +36,7 @@ import resize from './resize.png'
 
 
 
+
 const assets = {
     avatar_icon,
     gallery_icon,
@@ -48,6 +51,9 @@ const assets = {
     code,
     // bgImage,
     // profile_martin,
+    eye_open,
+    eye_off,
+    // profile_richard,
     delete_icon,
     video_call,
     pick_call,
